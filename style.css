@@ -5,13 +5,13 @@ html {
 * {
     margin: 0;
     padding: 0;
-    font-family: poppins;
+    font-family: "poppins", sans-serif;
     box-sizing: border-box;
 }
 
-body {
+/* body {
     overflow: scroll;
-}
+} */
 
 nav {
     display: flex;
@@ -83,7 +83,6 @@ nav .navbar-nav ul li a:hover {
 
 .main {
     background-image: linear-gradient(#6610f2 70%, white 30%);
-    /* background-color: #6610f2; */
     padding-top: 8rem;
     padding-right: 3rem;
     padding-left: 3rem;
@@ -120,7 +119,7 @@ nav .navbar-nav ul li a:hover {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 2rem;
@@ -211,7 +210,6 @@ nav .navbar-nav ul li a:hover {
 .about {
     width: 100%;
     background-color: #ffffff;
-    margin-bottom: 10px;
     padding-bottom: 10px;
     margin-top: 2.5rem;
 }
@@ -287,7 +285,7 @@ div.profil {
 }
 
 .prodi {
-    padding: 2rem 1rem;
+    padding: 2rem 2.5rem;
     width: 400px;
     background-color: rgb(255, 255, 255);
     color: black;
@@ -296,27 +294,17 @@ div.profil {
     box-shadow: 0 5px 20px rgba(81, 81, 81, 0.1);
 }
 
-.prodi-T h4 {
+.prodi-T h4,
+.prodi-M h4 {
     text-align: center;
     font-size: 24px;
     font-weight: 800;
-    margin: 20px;
+    margin-bottom: 0.4rem;
     color: rgb(179, 30, 30);
 }
 
 .prodi-M h4 {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 20px;
     color: rgb(0, 0, 185);
-}
-
-.prodi-T p {
-    margin: 30px;
-}
-
-.prodi-M p {
-    margin: 30px;
 }
 
 .kontak {
@@ -324,34 +312,28 @@ div.profil {
     background-color: #ffffff;
     margin-bottom: 30px;
     padding-bottom: 50px;
-    margin-top: 25px;
 }
 
 .kontak .cards {
     display: flex;
     justify-content: space-around;
-    margin: auto 70px;
-    /* background-color: #7d7d7d; */
 }
 
 .kontak .cards .card {
     width: 200px;
-    height: 300px;
     background-color: #ffffff;
     border-radius: 20px;
-    margin: 20px;
+    margin: 1.2rem;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     box-shadow: 5px 5px 15px rgb(125, 125, 125);
     cursor: pointer;
-    transition: 0.7s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .kontak .cards .card:hover {
-    width: 220px;
-    height: 320px;
+    scale: 1.05;
 }
 
 .kontak .cards .card .head-card {
@@ -377,7 +359,85 @@ div.profil {
 }
 
 .footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: rgb(236, 236, 236);
     text-align: center;
     font-size: 1rem;
     font-weight: 300;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+    .container .sambutan h4 {
+        font-size: 1.5rem;
+    }
+
+    .container .sambutan div {
+        font-size: 1.5rem;
+    }
+
+    .sambutan span.e {
+        font-size: 3rem;
+    }
+
+    .jurusan .prodis .prodi {
+        font-size: 0.8rem;
+        margin: 0 10px;
+    }
+
+    .about .header,
+    .kontak .header {
+        margin-bottom: 2.3rem;
+    }
+
+    .kontak .cards .card .head-card img {
+        width: 40px;
+    }
+
+    .kontak .cards .card .foot-card {
+        margin: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .main {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .main .containers {
+        flex-direction: column;
+    }
+
+    .main .containers .container .sambutan {
+        font-size: 1rem;
+    }
+    .main .containers .container .sambutan div .e {
+        font-size: 2rem;
+    }
+
+    .form-login {
+        padding: 1.8rem;
+    }
+
+    .form-login form h1 {
+        font-size: 1.4rem;
+        margin: 1rem;
+    }
+    .form-login form div {
+        margin-bottom: 0.7rem;
+    }
+
+    .form-login form div input,
+    .form-login form div label,
+    .form-login form button {
+        font-size: 0.8rem;
+    }
+
+    .about .jurusan .prodis,
+    .kontak .cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
